@@ -4,7 +4,7 @@
 Udacity Bike_Share Project
 
 ### Description
-Run Statistics on data related to bicycle sharing in given cities.
+Run Statistics on data related to bike sharing in given cities.
 
 
 ### Files used
