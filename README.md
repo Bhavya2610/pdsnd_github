@@ -1,14 +1,18 @@
 ### Date created
-project created and readme created date should be mentioned
+3/05/2020
 ### Project Title
-project title
+Udacity Bike_Share Project
 
 ### Description
-Describe what your project is about and what it does
+Run Statistics on data related to bicycle sharing in given cities.
 
 
 ### Files used
-mention files used
+
+chicago.csv
+new_york_city.csv
+washington.csv
+
 ### Credits
-credits should be added
+Thank you Udacity.
 
