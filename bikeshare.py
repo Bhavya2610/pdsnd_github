@@ -44,7 +44,7 @@ def get_filters():
             else:
                 print("NO filter is applied\n")
         break
-    print('-'*40)
+    print('-'*40.center(20))
     return city, month, day
 def load_data(city, month, day):
     """
@@ -57,13 +57,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    if(city=="Chicago"):
-        city_load='chicago.csv'
-    elif(city=='Washington'):
-        city_load='washington.csv'
-    else:
-        city_load='new_york_city.csv'
-    df = pd.read_csv(city_load)
+    df = pd.read_csv(CITY_DATA[city])
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
@@ -94,7 +88,7 @@ def time_stats(df):
     print(popular_hour)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*40.center(20))
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -125,7 +119,7 @@ def station_stats(df):
     print("End Station :   ", l[1])
    
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*40.center(20))
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
@@ -138,7 +132,7 @@ def trip_duration_stats(df):
     avg_time=df['Trip Duration'].mean()
     print("\n Average travel time:  ",avg_time)
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*40.center(20))
 def user_stats(df):
     """Displays statistics on bikeshare users."""
     print('\nCalculating User Stats...\n')
@@ -168,13 +162,16 @@ def user_stats(df):
     else:
         print("No Birth year data to share")
     print("\nThis took %s seconds." % (time.time() - start_time))
+<<<<<<< HEAD
     print('-'*40)
 #main function calls other functions
+=======
+    print('-'*40.center(20))
+>>>>>>> refactoring
 def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
