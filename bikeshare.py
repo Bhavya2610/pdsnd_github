@@ -162,12 +162,8 @@ def user_stats(df):
     else:
         print("No Birth year data to share")
     print("\nThis took %s seconds." % (time.time() - start_time))
-<<<<<<< HEAD
-    print('-'*40)
-#main function calls other functions
-=======
     print('-'*40.center(20))
->>>>>>> refactoring
+#main function calls other functions
 def main():
     while True:
         city, month, day = get_filters()
