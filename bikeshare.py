@@ -2,10 +2,6 @@ import time
 import pandas as pd
 import numpy as np
 
-CITY_DATA = { 'chicago': 'chicago.csv',
-              'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
-
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -173,6 +169,7 @@ def user_stats(df):
         print("No Birth year data to share")
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
+#main function calls other functions
 def main():
     while True:
         city, month, day = get_filters()
