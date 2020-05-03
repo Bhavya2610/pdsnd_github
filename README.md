@@ -5,7 +5,7 @@
 Udacity Bike_Share Project
 
 ### Description
-It Analyzes bike share data and apply stasts on it
+Run Statistics on data related to bike sharing in given cities.
 
 ### Files used
 Chicago.csv
