@@ -9,7 +9,7 @@ Run Statistics on data related to bike sharing in given cities.
 
 ### Files used
 
-chicago.csv
+Chicago.csv
 new_york_city.csv
 washington.csv
 
