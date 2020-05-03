@@ -61,13 +61,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    if(city=="Chicago"):
-        city_load='chicago.csv'
-    elif(city=='Washington'):
-        city_load='washington.csv'
-    else:
-        city_load='new_york_city.csv'
-    df = pd.read_csv(city_load)
+    df = pd.read_csv(CITY_DATA[city])
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
